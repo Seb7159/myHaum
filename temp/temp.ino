@@ -16,13 +16,12 @@
 #define ESP8266_PASS  "certificat"
 #define RXpinSEND 12   // ESP-01 wifiSEND module TX
 #define TXpinSEND 13   // ESP-01 wifiSEND module RX 
-#define RELAYbutton 14 // digital switch 1
-#define ALARMbutton 15 // digital switch 2 
-#define RELAYpin 16    // digital relay 
+#define RELAYbutton 15 // digital switch 1
+#define ALARMbutton 14 // digital switch 2 
 #define DHTpin 21      // digital temp sensor  
 #define BUZZpin 22     // digital buzzer 
 
-#define REFRESHupload 30 //15*60 second to upload data to server / to be changed to 15 min
+#define REFRESHupload 30 //30*60 second to upload data to server / to be changed to 15 min
 
 LiquidCrystal lcd(51, 50, 6, 7, 8, 9); 
 ESP8266_Simple wifiSEND( RXpinSEND, TXpinSEND); 
@@ -101,31 +100,36 @@ void setup(){
   pinMode(PIRsensorPin,INPUT); 
   pinMode(ALARMbutton,INPUT); 
   pinMode(RELAYbutton,INPUT); 
-  pinMode(RELAYpin, OUTPUT); 
   pinMode(BUZZpin, OUTPUT); 
   Serial.begin(9600); 
   wifiSEND.begin(9600); loadScreen(loadTime); loadTime++; 
-
+  
 
   lcd.setCursor(0,0); lcd.print("Resetting...             ");
   for( loadTime = 2 ; loadTime < 10; ++loadTime)
     loadScreen(loadTime); 
+
+
+
   
   char bufferr[300]; 
+  wifiSEND.sendCommand(F("AT"), bufferr, sizeof(bufferr)); delay(50); 
+  if(DEBUG) 
+    Serial.println(bufferr);
+    
   wifiSEND.sendCommand(F("AT+CWJAP?"), bufferr, sizeof(bufferr));
-  delay(5000); 
+  delay(2000); 
   if(DEBUG){ 
     Serial.println(bufferr);
     Serial.println(ESP8266_SSID);     
   }
 
-  if(bufferr!=ESP8266_SSID){ 
-  char buffer11[300]; 
-  wifiSEND.sendCommand(F("AT+RST"), buffer11, sizeof(buffer11)); 
-  delay(5000); 
+  if(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2]){ 
+  wifiSEND.sendCommand(F("AT+RST"), bufferr, sizeof(bufferr)); 
+  delay(1000); 
   wifiSEND.setupAsWifiStation(ESP8266_SSID, ESP8266_PASS, &Serial); 
   delay(5000); 
-  } 
+  }
   
   lcd.setCursor(0,0); lcd.print("Connecting...             "); 
   for( loadTime = 10 ; loadTime < 16; ++loadTime)
@@ -136,11 +140,12 @@ void setup(){
 }
 
 int alarm=0,lightBulb=0; 
-int lastON=0,r=0; 
+int r=0; 
 unsigned long WIFIupload = -REFRESHupload ,LASTmotion = 0; 
 
 void loop()
 {  
+  Serial.println("Starting new cycle"); 
   
   if(DEBUG) Serial.print("Gas value is "); 
   if(DEBUG) Serial.println(analogRead(GASpin)); 
@@ -154,7 +159,7 @@ void loop()
       char buffer[250]; 
 
       memcpy(buffer, 0, sizeof(buffer));     
-      strncpy_P(buffer, PSTR("/getgas.php?p=abc"), sizeof(buffer)-1);
+      strncpy_P(buffer, PSTR("/get/getgas.php?p=abc"), sizeof(buffer)-1);
      
       strncpy_P(buffer+strlen(buffer), PSTR("&lastg="), sizeof(buffer)-strlen(buffer)-1);
       ltoa(analogRead(GASpin), buffer+strlen(buffer), 10); 
@@ -203,7 +208,7 @@ void loop()
       lcd.setCursor(0,1); lcd.print(" armed in         "); 
       delay(1000); 
       
-      for( int i = 59 ; i>=0 ; --i ){
+      for( int i = 19 ; i>=0 ; --i ){
         lcd.setCursor(12,1);
         if(i<10) lcd.setCursor(11,1);
         lcd.print(i); lcd.print("         "); 
@@ -255,7 +260,6 @@ void loop()
       lcd.setCursor(0,1); 
       lcd.print("         ON!          "); 
       setColor(255,255,255); 
-      digitalWrite(RELAYpin,HIGH); 
     }
     else{
       lcd.setCursor(0,0); 
@@ -263,15 +267,10 @@ void loop()
       lcd.setCursor(0,1); 
       lcd.print("         OFF!     "); 
       setColor(0,0,0); 
-      digitalWrite(RELAYpin,LOW); 
     }
     delay(900); 
-    if(lastON){
-      r++; r%=2; 
-    }
   }
-  lastON=digitalRead(RELAYbutton); 
-
+  
   
   if(digitalRead(PIRsensorPin)){ // motion sense 
     if(DEBUG) Serial.println("Somebody is in this area!"); 
@@ -281,7 +280,7 @@ void loop()
       char buffer[250]; 
     
       memcpy(buffer, 0, sizeof(buffer));     
-      strncpy_P(buffer, PSTR("/getmotion.php?p=abc"), sizeof(buffer)-1);
+      strncpy_P(buffer, PSTR("/get/getmotion.php?p=abc"), sizeof(buffer)-1);
      
       strncpy_P(buffer+strlen(buffer), PSTR("&lastm="), sizeof(buffer)-strlen(buffer)-1);
       ltoa(millis()/1000, buffer+strlen(buffer), 10); 
@@ -352,7 +351,7 @@ void loop()
     char buffer[250]; 
     
       memcpy(buffer, 0, sizeof(buffer));     
-      strncpy_P(buffer, PSTR("/get.php?p=abc"), sizeof(buffer)-1);
+      strncpy_P(buffer, PSTR("/get/get.php?p=abc"), sizeof(buffer)-1);
      
       strncpy_P(buffer+strlen(buffer), PSTR("&temp="), sizeof(buffer)-strlen(buffer)-1);
       ltoa((int)dht.readTemperature(), buffer+strlen(buffer), 10); 
@@ -365,9 +364,6 @@ void loop()
 
       strncpy_P(buffer+strlen(buffer), PSTR("&light="), sizeof(buffer)-strlen(buffer)-1);
       ltoa(analogRead(PHOTOpin), buffer+strlen(buffer), 10); 
-
-      strncpy_P(buffer+strlen(buffer), PSTR("&relay="), sizeof(buffer)-strlen(buffer)-1);
-      ltoa(lightBulb, buffer+strlen(buffer), 10); 
 
       strncpy_P(buffer+strlen(buffer), PSTR("&ms="), sizeof(buffer)-strlen(buffer)-1);
       ltoa(millis()/1000, buffer+strlen(buffer), 10); 
