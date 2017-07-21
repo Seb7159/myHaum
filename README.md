@@ -80,6 +80,7 @@ To deploy the server files, connect to your server using a FTP program (I use Wi
 * [ESP8266](https://espressif.com/en/products/hardware/esp8266ex/overview) - Used to send data to the SQL server thorugh the ESP8266-01 module
 * [Fixed table header](https://codepen.io/nikhil8krishnan/full/WvYPvv/) - Design for tables insine the display application 
 * [NodeMCU firmware](https://github.com/nodemcu/nodemcu-firmware) - Big parts of code from the light's .ino source 
+* [Codrops](https://github.com/nodemcu/codrops) - Main website was created using several ideas of his, realised for the front-end part (ButtonComponentMorph,MorphingBackgroundShapes,FullscreenForm,InteractivePoints) 
 
 
 ## Versioning

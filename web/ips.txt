@@ -1,0 +1,410 @@
+web    2017 04 19   20 14 51                  86.123.250.85   RO
+   Judetul Timis   Faget   No Hostname   45.8500,22.1833   AS8708 RCS & RDS SA
+ip     2017 04 19   20 16 00                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 19   20 16 07                  86.123.250.85   RO
+   Judetul Timis   Faget   No Hostname   45.8500,22.1833   AS8708 RCS & RDS SA
+mobile 2017 04 19   20 16 25                  86.123.250.85   RO
+   Judetul Timis   Faget   No Hostname   45.8500,22.1833   AS8708 RCS & RDS SA
+mobile 2017 04 19   20 16 43                  86.123.250.85   RO
+   Judetul Timis   Faget   No Hostname   45.8500,22.1833   AS8708 RCS & RDS SA
+ip     2017 04 19   20 18 44                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 19   20 19 00                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+mobile 2017 04 19   20 19 42                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 19   20 19 45                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 19   20 20 45                  79.114.126.99   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+mobile 2017 04 19   20 21 00                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+mobile 2017 04 19   20 21 03                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 04 19   20 21 10                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 04 19   20 21 13                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 04 19   20 21 54                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 04 19   20 21 55                  213.233.84.63   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+ip     2017 04 19   20 22 09                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 19   20 24 59                  79.114.126.99   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 20   00 13 27                  79.114.52.241   RO
+   Judetul Timis   Peciu Nou   79-114-52-241.rdsnet.ro   45.6064,21.0578   AS8708 RCS & RDS SA
+app    2017 04 20   15 33 21                  79.114.126.99   RO
+   Judetul Timis   Timișoara   79-114-126-99.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 21   13 35 22                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 21   13 36 26                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 21   13 36 53                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   00 54 03                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   00 54 52                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   00 55 49                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   13 17 54                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   13 18 55                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 22   13 24 35                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 26   22 50 14                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 26   22 50 50                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 26   22 50 53                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 26   22 51 01                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 26   22 51 17                  84.232.163.186   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+mobile 2017 04 26   22 51 18                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 04 28   21 03 54                  213.233.84.174   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+ip     2017 04 29   12 05 19                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 29   12 11 28                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 29   12 11 36                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 29   12 18 30                  84.232.163.186   RO
+   Judetul Timis   Timișoara   84-232-163-186.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 29   20 29 10                  79.114.24.130   RO
+   Judetul Timis   Timișoara   79-114-24-130.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 04 29   20 29 16                  79.114.24.130   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 04 29   22 22 12                  109.166.139.62   RO
+         No Hostname   46.0000,25.0000   AS8953 Orange Romania S.A.
+web    2017 04 29   22 22 18                  109.166.139.62   RO
+         No Hostname   46.0000,25.0000   AS8953 Orange Romania S.A.
+web    2017 04 29   22 22 33                  109.166.139.62   RO
+         No Hostname   46.0000,25.0000   AS8953 Orange Romania S.A.
+app    2017 05 02   08 12 56                  213.233.84.36   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 03   08 39 01                  213.233.84.36   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 03   08 43 01                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+web    2017 05 03   09 31 33                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+web    2017 05 03   09 35 33                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+mobile 2017 05 03   09 35 34                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+mobile 2017 05 03   09 36 17                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+mobile 2017 05 03   09 36 30                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+ip     2017 05 03   09 37 44                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+mobile 2017 05 03   09 40 58                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+app    2017 05 03   10 03 22                  213.233.84.36   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 03   10 03 30                  213.233.84.36   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 03   10 03 31                  213.233.84.36   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 06   13 19 43                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 06   13 30 10                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+app    2017 05 06   13 31 00                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 06   13 31 22                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+mobile 2017 05 06   13 31 23                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 06   13 47 25                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+web    2017 05 06   13 50 36                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+mobile 2017 05 06   13 50 37                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+app    2017 05 06   13 51 46                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 06   16 16 33                  213.233.84.85   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 06   21 50 36                  79.114.102.60   RO
+   Judetul Timis   Timișoara   79-114-102-60.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 05 08   08 08 56                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+web    2017 05 08   08 09 02                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+web    2017 05 08   08 12 26                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+app    2017 05 08   09 39 18                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 08   11 57 57                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 08   12 01 07                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 08   12 01 08                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 08   12 01 18                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 08   12 01 19                  213.233.84.186   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 08   12 30 02                  217.73.174.194   RO
+   Bihor   Oradea   No Hostname   47.0667,21.9333   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+app    2017 05 09   12 52 17                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   16 59 20                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 06 36                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 07 04                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 07 05                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 07 20                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 07 20                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 07 21                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 11 20                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 11 20                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 12 05                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 13 05                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 13 53                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 14 16                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 14 17                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 14 28                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 16 14                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 19 03                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 19 05                  79.114.72.212   RO
+   Timis   Crisana   No Hostname   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 19 15                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 20 50                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 22 34                  79.114.72.212   RO
+   Timis   Crisana   No Hostname   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 23 10                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 23 24                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 23 31                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 23 52                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 24 12                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 24 37                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 24 42                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 24 52                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 24 53                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 26 15                  79.114.72.212   RO
+   Timis   Crisana   79-114-72-212.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 05 10   17 31 16                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 31 45                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 31 46                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 31 56                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 32 11                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 32 11                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 32 42                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 32 43                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 30                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 31                  79.113.77.171   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 41                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 41                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 42                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 49                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 33 51                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 34 00                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 34 01                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 34 04                  79.113.77.171   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 34 05                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   17 34 06                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 10   22 20 49                  79.113.77.171   RO
+   Judetul Timis   Timișoara   79-113-77-171.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 05 13   21 53 11                  213.233.84.226   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 05 13   21 53 44                  213.233.84.226   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 27   11 21 02                  193.226.12.217   RO
+         No Hostname   46.0000,25.0000   AS2614 Agentia de Administrare a Retelei Nationale de Informatica pentru Educatie si Cercetare
+ip     2017 05 27   11 22 14                  213.233.84.50   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 05 27   11 22 23                  213.233.84.50   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+mobile 2017 05 27   11 22 24                  213.233.84.50   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+ip     2017 05 27   18 02 44                  79.114.12.223   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 02   19 21 00                  84.232.167.230   RO
+   Judetul Timis   Timișoara   84-232-167-230.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 02   19 21 27                  84.232.167.230   RO
+   Judetul Timis   Timișoara   84-232-167-230.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 05   15 51 49                  79.114.0.10   RO
+   Timis   Timisoara   79-114-0-10.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 07   13 20 49                  79.113.71.180   RO
+   Judetul Timis   Timișoara   79-113-71-180.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 07   14 29 26                  79.113.71.180   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 06 10   23 05 21                  79.113.71.180   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 06 14   10 11 18                  213.233.84.121   RO
+         No Hostname   46.0000,25.0000   AS12302 Vodafone Romania S.A.
+app    2017 06 16   18 59 59                  79.114.39.193   
+               
+app    2017 06 16   19 00 11                  79.114.39.193   
+               
+ip     2017 06 16   19 00 35                  79.114.39.193   
+               
+app    2017 06 16   19 01 33                  79.114.39.193   
+               
+app    2017 06 16   22 05 08                  79.114.39.193   
+               
+app    2017 06 16   22 06 09                  79.114.39.193   
+               
+app    2017 06 16   22 06 10                  79.114.39.193   
+               
+mobile 2017 06 16   22 06 50                  79.114.39.193   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+mobile 2017 06 16   22 06 58                  79.114.39.193   
+               
+mobile 2017 06 16   22 08 32                  79.114.39.193   
+               
+ip     2017 06 22   18 59 17                  84.232.171.145   RO
+   Judetul Timis   Timișoara   No Hostname   45.7494,21.2272   AS8708 RCS & RDS SA
+ip     2017 07 01   18 32 59                  86.125.225.12   RO
+   Timis   Crisana      45.7500,21.2167   AS8708 RCS & RDS SA
+web    2017 07 01   18 33 04                  86.125.225.12   RO
+   Timis   Crisana      45.7500,21.2167   AS8708 RCS & RDS SA
+app    2017 07 01   18 37 51                  86.125.225.12   RO
+   Timis   Crisana   86-125-225-12.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
+mobile 2017 07 02   15 06 16                  86.125.225.12   RO
+   Timis   Crisana      45.7500,21.2167   AS8708 RCS & RDS SA
+web    2017 07 02   15 06 26                  86.125.225.12   RO
+   Timis   Crisana      45.7500,21.2167   AS8708 RCS & RDS SA
+ip     2017 07 03   01 53 11                  100.99.3.225   
+               
+ip     2017 07 03   13 10 11                  66.249.93.44   US
+            38.0000,-97.0000   AS15169 Google Inc.
+ip     2017 07 03   13 26 34                  100.99.3.225   
+               
+web    2017 07 03   13 26 41                  100.99.3.225   
+               
+web    2017 07 03   19 37 38                  100.99.3.225   
+               
+web    2017 07 04   00 13 46                  213.233.84.193   RO
+            46.0000,25.0000   AS12302 Vodafone Romania S.A.
+mobile 2017 07 04   00 13 47                  213.233.84.193   RO
+            46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 07 04   03 54 44                  100.99.3.225   
+               
+web    2017 07 04   14 55 22                  100.99.3.225   
+               
+web    2017 07 04   14 58 42                  100.99.3.225   
+               
+ip     2017 07 04   15 06 13                  89.123.9.68   RO
+   Judetul Timis   Timișoara      45.7494,21.2272   AS9050 TELEKOM ROMANIA COMMUNICATION S.A
+web    2017 07 04   15 08 59                  100.99.3.225   
+               
+web    2017 07 04   15 09 16                  89.123.9.68   RO
+   Judetul Timis   Timișoara      45.7494,21.2272   AS9050 TELEKOM ROMANIA COMMUNICATION S.A
+web    2017 07 04   15 10 43                  89.123.9.68   RO
+   Judetul Timis   Timișoara      45.7494,21.2272   AS9050 TELEKOM ROMANIA COMMUNICATION S.A
+web    2017 07 04   15 19 45                  100.99.3.225   
+               
+mobile 2017 07 04   15 19 46                  100.99.3.225   
+               
+web    2017 07 04   15 19 49                  100.99.3.225   
+               
+mobile 2017 07 04   15 19 51                  100.99.3.225   
+               
+mobile 2017 07 04   15 23 08                  100.99.3.225   
+               
+web    2017 07 04   15 36 47                  100.99.3.225   
+               
+mobile 2017 07 04   15 36 48                  100.99.3.225   
+               
+web    2017 07 04   15 43 01                  100.99.3.225   
+               
+mobile 2017 07 04   15 43 03                  100.99.3.225   
+               
+web    2017 07 04   16 16 11                  100.99.3.225   
+               
+web    2017 07 04   16 39 34                  100.99.3.225   
+               
+mobile 2017 07 04   16 39 35                  100.99.3.225   
+               
+web    2017 07 04   17 07 58                  100.99.3.225   
+               
+web    2017 07 04   17 20 37                  100.99.3.225   
+               
+ip     2017 07 04   17 21 46                  100.99.3.225   
+               
+web    2017 07 04   17 57 08                  100.99.3.225   
+               
+web    2017 07 04   17 57 26                  100.99.3.225   
+               
+web    2017 07 04   18 25 40                  100.99.3.225   
+               
+app    2017 07 04   19 27 41                  100.99.3.225   
+               
+web    2017 07 04   20 15 15                  100.99.3.225   
+               
+mobile 2017 07 04   20 15 17                  100.99.3.225   
+               
+web    2017 07 05   22 05 34                  213.233.84.33   RO
+            46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 07 05   22 05 34                  213.233.84.33   RO
+            46.0000,25.0000   AS12302 Vodafone Romania S.A.
+mobile 2017 07 05   22 05 36                  213.233.84.33   RO
+            46.0000,25.0000   AS12302 Vodafone Romania S.A.
+web    2017 07 08   15 02 03                  79.118.4.125   RO
+   Judetul Timis   Timișoara   79-118-4-125.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 07 08   17 23 46                  79.118.4.125   RO
+   Judetul Timis   Timișoara   79-118-4-125.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+app    2017 07 10   00 13 14                  79.118.4.125   RO
+   Judetul Timis   Timișoara   79-118-4-125.rdsnet.ro   45.7494,21.2272   AS8708 RCS & RDS SA
+web    2017 07 14   20 19 17                  82.76.117.232   RO
+            46.0000,25.0000   AS8708 RCS & RDS SA
+web    2017 07 18   15 07 06                  86.125.226.31   RO
+   Timis   Crisana   86-125-226-31.rdsnet.ro   45.7500,21.2167   AS8708 RCS & RDS SA
