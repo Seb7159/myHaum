@@ -1,23 +1,24 @@
-#include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h>                                          // libraries
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
-const char* ssid = "H218N";
+
+const char* ssid = "H218N";                                       // set WiFi ssid and pass
 const char* password = "certificat";
 
 // 13 is pin 7 
 // 16 is pin 0 
 
-ESP8266WebServer server(80);
+ESP8266WebServer server(80);                                      // set server port 
 
-const int led = 13;
-int onff = 0, door = 0; 
+const int led = 13;                                               // set led pin 
+int onff = 0, door = 0;                                           // set booleans for dor and on/off led 
 
-void handleRoot() {
+void handleRoot() {                                               // root page 
   server.send(200, "text/plain", "Hello Seba!");
 }
 
-void handleOffline() {
+void handleOffline() {                                            // light control page 
   onff++; onff%=2;
   if(onff==1)
     server.send(200, "text/plain", "Light ON!");
@@ -26,7 +27,7 @@ void handleOffline() {
   digitalWrite(13, onff);
 }
 
-void handleNotFound(){
+void handleNotFound(){                                            // error 404 not found page 
   digitalWrite(led, 1);
   String message = "File Not Found\n\n";
   message += "URI: ";
@@ -43,11 +44,11 @@ void handleNotFound(){
   digitalWrite(led, 0);
 }
 
-void setup(){ 
+void setup(){                                                       // setup function with pin setup 
   pinMode(led, OUTPUT);
   digitalWrite(led, 0);
   Serial.begin(115200);
-  WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);                                       // start WiFi module 
   Serial.println("");
 
   // Wait for connection
@@ -68,7 +69,7 @@ void setup(){
   
   WiFiClient client;
   const int httpPort = 80;
-  if (!client.connect("seba.tm-edu.ro", httpPort)) {
+  if (!client.connect("seba.tm-edu.ro", httpPort)) {                      // update local ip to SQL database 
     Serial.println("connection failed");
     return;
   }
@@ -105,7 +106,7 @@ void setup(){
   if (MDNS.begin("esp8266")) {
     Serial.println("MDNS responder started");
   }
-
+                                                                    // set all pages that can be opened starting with root page, switch trigger, test and error 404 page
   server.on("/", handleRoot);
 
   server.on("/offline", handleOffline);
@@ -120,6 +121,6 @@ void setup(){
   Serial.println("HTTP server started");
 }
 
-void loop(){
+void loop(){                                                        // cycle of WiFi module testing whether the page were entered or not 
   server.handleClient();
 }
