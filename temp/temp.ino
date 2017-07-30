@@ -127,24 +127,31 @@ void setup(){
   
 
   lcd.setCursor(0,0); lcd.print("Resetting...             ");
-  for( loadTime = 2 ; loadTime < 10; ++loadTime)
+  for( loadTime = 2 ; loadTime < 6; ++loadTime)
     loadScreen(loadTime); 
 
   char bufferr[300]; 
   wifiSEND.sendCommand(F("AT"), bufferr, sizeof(bufferr)); delay(50); 
   if(DEBUG) 
     Serial.println(bufferr);
+
+  for( loadTime = 6 ; loadTime < 7; ++loadTime)
+    loadScreen(loadTime); 
+
     
   wifiSEND.sendCommand(F("AT+CWJAP?"), bufferr, sizeof(bufferr));
-  delay(2000); 
+  delay(100); 
   if(DEBUG){ 
     Serial.println(bufferr);
     Serial.println(ESP8266_SSID);     
   }
 
-  if(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2]){ 
+  for( loadTime = 7 ; loadTime < 10; ++loadTime)
+    loadScreen(loadTime); 
+
+  if(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2]){          // test if the ESP is already connected to previous WiFi 
   wifiSEND.sendCommand(F("AT+RST"), bufferr, sizeof(bufferr));                 // reset WiFi module 
-  delay(1000); 
+  delay(2000); 
   wifiSEND.setupAsWifiStation(ESP8266_SSID, ESP8266_PASS, &Serial);            // connect to the WiFi with the set ssid and password 
   delay(5000); 
   }
@@ -181,7 +188,7 @@ void loop()                                                                // st
   
   if(DEBUG) Serial.print("Gas value is ");                                 // read gas and alarm if gas levels are too high ( over 45% = gas leaks, over 50% = hazardous environment ) 
   if(DEBUG) Serial.println(analogRead(GASpin)); 
-  if(analogRead(GASpin)>350){
+  if(analogRead(GASpin)>450){
       if(analogRead(GASpin)>500){
         lcd.setCursor(0,0); 
         lcd.print(" WARNING! GAS"); 
