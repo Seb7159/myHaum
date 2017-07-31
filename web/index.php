@@ -1,4 +1,4 @@
-<?php
+<?php  										// start session for logged in users 
 	session_start(); 
 	if(empty($_SESSION["user"]))
 		if(!empty($_POST['n'])){
@@ -73,15 +73,15 @@
 		button:focus {outline:0;} 
 		.pater::after {
 			content: 
-		<?php if($_SESSION["house"]=="Stanici"){ 
-				$con=mysql_connect("localhost", "seba","seba1234");
+		<?php if($_SESSION["house"]=="Stanici"){ 						// for the moment only house Stanici will have access to their sensors 
+				$con=mysql_connect("localhost", "seba","seba1234");		// TODO: revamp system for any user that is using it;
 				if($con){
 				mysql_select_db("seba", $con);
 
 				$result=mysql_query("SELECT CurrentDate, Temperature, Humidity, Light 
 				                     FROM seba_data 
 				                     ORDER BY CurrentDate 
-				                     DESC LIMIT 1;"); 
+				                     DESC LIMIT 1;"); 					// display a small weather widget with their product's last pushed data 
 				$row=mysql_fetch_array($result); 
 				echo '"';
 				  $hr = $row[0][11].$row[0][12]; 
@@ -108,7 +108,7 @@
 			}
 
 		 }
-		 else 
+		 else 	// in case it's a user with another house, it will display the default notification panel 
 		 	echo '"Our product"'; 
 		 ?> 
 		;
@@ -123,7 +123,7 @@
 				</svg>
 			</div>
 			
-			<?php if($_SESSION["user"]=="") { 
+			<?php if($_SESSION["user"]=="") { 				// if there's no user logged in, display the log in and sign up buttons 
 					?>  
 			<div id="logsign" class="mockup-content" style="left: 0; top: 0; z-index: 123">
 			<script>
@@ -177,7 +177,7 @@
 			<div class="content content--fixed" id="headUp"> 
 				<header class="codrops-header">
 				  <h1 class="codrops-header__title">
-					<?php if($_SESSION["user"]!="")
+					<?php if($_SESSION["user"]!="")				// or the case where the user is logged in 
 						echo "<div>".$_SESSION["nick"]."'s myHaum menu </div>"; 
 					?> 
 					</h1>
@@ -191,14 +191,16 @@
 
 
 
-					<?php if(empty($_SESSION["user"])||$_SESSION["house"]!="Stanici"){ ?>  
+					<?php if(empty($_SESSION["user"])||$_SESSION["house"]!="Stanici"){ 			// if the user's house isn't Stanici
+						?>  
 					<script>
 					if (screen.width > 800) {
 					  document.write('<a class="pater" href="#"><svg class="pater__deco" width="300" height="240" viewBox="0 0 1000 800"><path d="M27.4,171.8C73,42.9,128.6,1,128.6,1s0,0,0,0c58.5,0,368.3,0.3,873.2,0.8c38.5,211,42.1,373.5,38.9,476.7c-2.5,80.3-10.6,174.9-76.7,247.8c-15.1,16.6-37.4,41.2-72.8,53.9c-92.4,33.1-173-50.8-283.9-99.4c-224.3-98.4-334.9,51.4-472.2-45.6C-6.3,535.2-14.5,290.6,27.4,171.8z"/></svg><h4 class="pater__title">Reliable, low-cost, unique.</h4><p class="pater__desc">Our vision since the start of the project was set on approachability and pliability.</p></a>');
 					} 
 					</script>
 
-					<?php }else{ ?>
+					<?php }else{ 																// if the user's house is Stanici 
+						?>
 
 					<script>
 					if (screen.width > 800) { // desktop 
@@ -219,7 +221,7 @@
 					$result=mysql_query("SELECT CurrentDate, Temperature, Humidity, Light 
 					                     FROM seba_data 
 					                     ORDER BY CurrentDate 
-					                     DESC LIMIT 1;"); 
+					                     DESC LIMIT 1;"); 				// always on weather widget part to be dislayed 
 					$row=mysql_fetch_array($result); 
 
 					if($row[3]/1024*100>40)
@@ -251,7 +253,7 @@
 					$result=mysql_query("SELECT CurrentDate, Temperature, Humidity, Light 
 					                     FROM seba_data 
 					                     ORDER BY CurrentDate 
-					                     DESC LIMIT 1;"); 
+					                     DESC LIMIT 1;"); 			// on scroll weather widget with more details that will be displayed 
 					$row=mysql_fetch_array($result); 
 
 					echo 'document.write("' . $row[1] . '&deg;C in the main room, with ' . $row[2] . '% humidity and a brigthness point of ' . intval($row[3]/1024*100) . '%.");';
@@ -262,7 +264,7 @@
 
 					document.write('</p></a>');
 					}
-					else{ // mobile
+					else{ // if the device used is a mobile one display almost the same things 
 						document.write('<a content="Yes" class="pater" href="../display.php"><svg class="pater__deco" width="300" height="240" viewBox="0 0 1000 800"><path d="M27.4,171.8C73,42.9,128.6,1,128.6,1s0,0,0,0c58.5,0,368.3,0.3,873.2,0.8c38.5,211,42.1,373.5,38.9,476.7c-2.5,80.3-10.6,174.9-76.7,247.8c-15.1,16.6-37.4,41.2-72.8,53.9c-92.4,33.1-173-50.8-283.9-99.4c-224.3-98.4-334.9,51.4-472.2-45.6C-6.3,535.2-14.5,290.6,27.4,171.8z"/></svg><h4 class="pater__title">');
 
 					<?php 
@@ -306,7 +308,7 @@
 
 			<div class="content-wrap">
 				<font style="font-size: 70px" class="content__big"> 
-				<?php 
+				<?php 																	// create different salutation for every page 
 					$hi = array("Welcome, ", "Hey there, ", "Good day, ", "Hello, ");
 					echo $hi[rand(0, count($hi) - 1)]; 
 					if($_SESSION["user"]!=""){
@@ -407,7 +409,7 @@
 			<section class="content content--related">
 				<p class="content__info">If you think our concept is cool,
 					<script>
-						if (screen.width <= 800) {
+						if (screen.width <= 800) {							// let some spacing if there's a mobile device 
 						  document.write('<br/>');
 						}
 					</script>
@@ -463,7 +465,7 @@
 			</section>
 		</main>
 		<?php
-		if($_SESSION["user"]!=""){
+		if($_SESSION["user"]!=""){		// define margins if the user is set already on the session 
 		?>
 		<script>
 		if(screen.width>0){
@@ -471,14 +473,7 @@
 			document.getElementById("headUp").style.top="0%";
 		}
 		</script>
-		<?php } else{ ?>
-		<script>
-		if(screen.width<=800){
-			document.getElementById("headUp").style.left="7%";
-			document.getElementById("headUp").style.top="-1%";
-		}
-		</script> 
-		<?php } ?>
+		<?php } ?> 
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/scrollMonitor.js"></script>
@@ -487,10 +482,11 @@
 		<script src="js/uiMorphingButton_fixed.js"></script>	
 		<script src="js/uiMorphingButton_inflow.js"></script> 
 		<script> 
+													// the next js functions are used for log in and sign up animations on closing their windows 
 		function signupOFF() {
 				setTimeout(function () {
 			        function jsHello(i) {
-					    if (i > 1) return;
+					    if (i > 1) return; 
 
 					    setTimeout(function () {
 
@@ -527,6 +523,9 @@
 			    document.getElementById("mobileErrorP").style.opacity = "0";
 			}
 
+
+
+			// move div when something from sub is clicked 
 			function subClick() { 
 				document.getElementById("sub").click();
 				if(screen.width <= 800){
@@ -537,10 +536,8 @@
 					}
 				} 
 			}
-			function shareClick() {
-			    document.getElementById("share").click();
-			}
 
+			// on scroll animations 
 			(function() {
 				var docElem = window.document.documentElement, didScroll, scrollPosition;
 

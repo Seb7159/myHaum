@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
    <title>Data display</title>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>  
 <style>
+
 h1{
   font-size: 30px;
   color: #fff;
@@ -109,7 +109,7 @@ section{
 <div id="contentFull">
 
 <script>
-if (screen.width <= 800) {
+if (screen.width <= 800) {                         // in case a smartphone is used 
   document.getElementById("contentFull").style.opacity = "0";
   window.location = "AppDisplay.php";
 }
@@ -117,16 +117,16 @@ if (screen.width <= 800) {
 
 
 <?php
-error_reporting(0);
+error_reporting(0);                                // set mysql error displaying to none 
 ini_set('display_errors', 0);
-date_default_timezone_set("Europe/Bucharest"); 
-$ip = $_SERVER['REMOTE_ADDR'];
+date_default_timezone_set("Europe/Bucharest");     // set used timezone 
+
+$ip = $_SERVER['REMOTE_ADDR'];                     // fetch ip details from client 
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json")); 
 file_put_contents("ips.txt", "web    " . date('Y m d   H i s') . "                  " . $ip . "   " . $details->country . "\n" . "   " . $details->region . "   " . $details->city . "   " . $details->hostname . "   " . $details->loc . "   " . $details->org . "\n", FILE_APPEND); 
 
 
-$con=mysql_connect("localhost", "seba","seba1234");
-
+$con=mysql_connect("localhost", "seba","seba1234"); // connect to SQL database 
 if(!$con)
    {
     die('Nu s-a putut realiza conectarea:'.mysql_error());
@@ -137,7 +137,7 @@ mysql_select_db("seba", $con);
 $result=mysql_query("SELECT CurrentDate, Temperature, Humidity, Light 
                      FROM seba_data 
                      ORDER BY CurrentDate 
-                     DESC LIMIT 1;"); 
+                     DESC LIMIT 1;");                   // get notification panel data 
 
 echo "<div style=\"float: right; width: 25%; padding-right: 4%\">"; 
 while($row=mysql_fetch_array($result)){
@@ -154,7 +154,7 @@ while($row=mysql_fetch_array($result)){
 echo "</div><br><br>"; 
 
 
-$result=mysql_query("Select * FROM seba_data ORDER BY CurrentDate DESC");
+$result=mysql_query("Select * FROM seba_data ORDER BY CurrentDate DESC");         // get latest sensor data to be displayed on table 
 
 echo "<br><h1>Sensor data</h1>";
 echo "	<div class=\"tbl-header\">";
@@ -187,7 +187,7 @@ echo "</tbody></table></div>";
 
 
 
-$result=mysql_query("Select * FROM seba_data_gas ORDER BY CurrentDate DESC");
+$result=mysql_query("Select * FROM seba_data_gas ORDER BY CurrentDate DESC");           // get latest gas leaks detected by the product 
 
 echo "<div style='float: left; width: 40%; padding-left: 5%'><h1> Air hazard </h1>";
 echo "	<div class=\"tbl-header\">";
@@ -206,7 +206,7 @@ echo "</tbody></table></div></div>";
 
 
 
-$result=mysql_query("Select * FROM seba_data_motion ORDER BY CurrentDate DESC");
+$result=mysql_query("Select * FROM seba_data_motion ORDER BY CurrentDate DESC");        // get latest motion sensed by the product 
 
 echo "<div style='float: right; width: 40%; padding-right: 5%'><h1> Movement detect </h1>";
 echo "	<div class=\"tbl-header\">";
@@ -238,7 +238,7 @@ mysql_close($con);
 
 
 <script>
-
+// background script for changing colors 
 var colors = new Array(
   [37,196,129],
   [37,183,196],
@@ -302,14 +302,14 @@ setInterval(updateGradient,10);
 
 
 
-$(window).on("load resize ", function() {
+$(window).on("load resize ", function() {             // use jQuery to resize the table's parameters 
   var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
   $('.tbl-header').css({'padding-right':scrollWidth});
 }).resize();
 
 
 
-var lastDate;  // GET THE LAST DATE FROM THE TABLE 
+var lastDate;  // GET THE LAST DATE FROM THE MAIN TABLE USING AJAX 
 $.ajax({        
       type: "GET",                               
       url: 'get/getLast.php',                        
@@ -325,12 +325,12 @@ $.ajax({
         console.log("Error: " + errorThrown);  
       }
     });
-var lastDateGas;  // GET THE LAST DATE FROM THE TABLE 
+var lastDateGas;  // GET THE LAST DATE FROM THE GAS TABLE USING AJAX
 $.ajax({        
       type: "GET",                               
       url: 'get/getLast.php',                  //the script to call to get data          
-      data: 'q=g',                        //you can insert url argumnets here to pass to api.php
-                                       //for example "id=5&parent=6"
+      data: 'q=g',                        
+                                       
       dataType: 'json',                //data format      
       success: function(data)          //on recieve of reply
       {
@@ -341,12 +341,12 @@ $.ajax({
         console.log("Error: " + errorThrown);  
       }
     });
-var lastDateMotion;  // GET THE LAST DATE FROM THE TABLE 
+var lastDateMotion;  // GET THE LAST DATE FROM THE MOTION TABLE USING AJAX
 $.ajax({        
       type: "GET",                               
       url: 'get/getLast.php',                  //the script to call to get data          
-      data: 'q=m',                        //you can insert url argumnets here to pass to api.php
-                                       //for example "id=5&parent=6"
+      data: 'q=m',                        
+                                       
       dataType: 'json',                //data format      
       success: function(data)          //on recieve of reply
       {
@@ -359,7 +359,7 @@ $.ajax({
     });
 
 
-function refreshTable() { 
+function refreshTable() {               // add new rows to the main table for the user to not refresh the page 
     var table = document.getElementById("wholeData");
     var row = table.insertRow(0); 
     var data = new Array(10); 
@@ -377,7 +377,7 @@ function refreshTable() {
           lastDate = date; 
 
           for(var i=0;i<9;++i) 
-      data[i] = row.insertCell(i);
+           data[i] = row.insertCell(i);
 
           for(var i = 0; i < 9; ++i){ 
             data[i].style.color = "rgba(255,255,255,0)"; 
@@ -432,12 +432,10 @@ function refreshTable() {
           var tempNotifCol = 0.98; 
           var humNotifCol = 0.8; 
           var tempTimeNotifCol = 0.6; 
-          //var tempHrCol = 0.8; 
 
           document.getElementById("tempNot").style.opacity = 0; 
           document.getElementById("humNot").style.opacity = 0; 
-          document.getElementById("tempTimeNot").style.opacity = 0; 
-          //ocument.getElementById("tempHr").style.opacity = 0; 
+          document.getElementById("tempTimeNot").style.opacity = 0;  
 
           document.getElementById("tempNotif").innerHTML = Data[1]; 
           document.getElementById("humNotif").innerHTML = Data[2]; 
@@ -464,17 +462,14 @@ function refreshTable() {
         
             a += tempNotifCol/titleRef; 
             b += humNotifCol/titleRef; 
-            //c += tempHrCol/titleRef; 
             d += tempTimeNotifCol/titleRef; 
 
             if(a>tempNotifCol) a=tempNotifCol; 
             if(b>humNotifCol) b=humNotifCol; 
-            //if(c>tempHrCol) c=tempHrCol; 
             if(d>tempTimeNotifCol) d=tempTimeNotifCol; 
 
             document.getElementById("tempNot").style.opacity = Math.floor(a*100)/100; 
             document.getElementById("humNot").style.opacity = Math.floor(b*100)/100; 
-            //document.getElementById("tempHr").style.opacity = Math.floor(c*100)/100; 
             document.getElementById("tempTimeNot").style.opacity = Math.floor(d*100)/100; 
 
                 pos += increment; 
@@ -492,7 +487,7 @@ function refreshTable() {
     }); 
 }
 
-function refreshTableGas() { 
+function refreshTableGas() {                // add new rows to the gas table 
     var tableg = document.getElementById("gasData");
     var row = tableg.insertRow(0); 
     var data = new Array(10); 
@@ -565,7 +560,7 @@ function refreshTableGas() {
     });
 }
 
-function refreshTableMotion() { 
+function refreshTableMotion() {                // add new rows to the motion sense table 
     var tablem = document.getElementById("motionData");
     var row = tablem.insertRow(0); 
     var data = new Array(10); 
@@ -639,6 +634,8 @@ function refreshTableMotion() {
       }
     });
 }
+
+// set 10 seconds for all the tables to refresh 
 setInterval(refreshTable, 10000); 
 setInterval(refreshTableGas, 10000); 
 setInterval(refreshTableMotion, 10000); 
