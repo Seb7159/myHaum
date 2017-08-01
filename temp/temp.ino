@@ -90,7 +90,15 @@ byte si[8] = {
   B11111,
   B11111,
 };
-
+byte deg[8] = {
+  B000111,
+  B00101,
+  B00111,
+  B00000,
+  B00000,
+  B00000,
+  B00000,
+};
 
 
 
@@ -108,6 +116,7 @@ void setup(){
   lcd.createChar(5,sol); 
   lcd.createChar(6,la); 
   lcd.createChar(7,si);
+  lcd.createChar(8,deg); 
   
   lcd.begin(16, 2);                   
   lcd.setCursor(0,0); 
@@ -149,7 +158,7 @@ void setup(){
   for( loadTime = 7 ; loadTime < 10; ++loadTime)
     loadScreen(loadTime); 
 
-  if(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2]){          // test if the ESP is already connected to previous WiFi 
+  if(!(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2])){          // test if the ESP is already connected to previous WiFi 
   wifiSEND.sendCommand(F("AT+RST"), bufferr, sizeof(bufferr));                 // reset WiFi module 
   delay(2000); 
   wifiSEND.setupAsWifiStation(ESP8266_SSID, ESP8266_PASS, &Serial);            // connect to the WiFi with the set ssid and password 
@@ -177,7 +186,86 @@ unsigned long WIFIupload = -REFRESHupload ,LASTmotion = 0;                 // se
 
 
 
+void ifPressButton(){                                       // function for seeing if rhe buttons are pressed 
+  if(digitalRead(ALARMbutton)){                                                 // event if alarm button(2) is pushed 
+    alarm++; alarm=alarm%2; 
+    if(DEBUG) Serial.print("Alarm is "); if(DEBUG) Serial.println(alarm);  
+    if(alarm){
+      
+      lcd.setCursor(0,0); lcd.print("House will be         "); 
+      lcd.setCursor(0,1); lcd.print(" armed in         "); 
+      delay(400); 
+      
+      for( int i = 19 ; i>=0 ; --i ){
+        lcd.setCursor(12,1);
+        if(i<10) lcd.setCursor(11,1);
+        lcd.print(i); lcd.print("         "); 
 
+        setColor(40,0,0);
+        delay(100); 
+        setColor(0,0,0); 
+        int ok=0; 
+        
+        for(int i=0;i<9;i++){
+          if(digitalRead(ALARMbutton)){
+            alarm++; alarm=alarm%2; 
+            if(DEBUG) Serial.print("Alarm is "); if(DEBUG) Serial.println(alarm);  
+            ok=1; 
+            break; 
+          }
+          delay(100); 
+        }
+        if(ok==1)
+          break; 
+      }
+      if(alarm){
+        lcd.setCursor(0,0); 
+        lcd.print("House is now       "); 
+        lcd.setCursor(0,1); 
+        lcd.print("      ARMED!          "); 
+        setColor(255,0,0); 
+        }
+      else{
+        lcd.setCursor(0,0); 
+        lcd.print("House is now       "); 
+        lcd.setCursor(0,1); 
+        lcd.print("    UNARMED!           "); 
+        setColor(0,0,255); 
+      }
+    }
+    else{
+      lcd.setCursor(0,0); 
+      lcd.print("House is now       "); 
+      lcd.setCursor(0,1); 
+      lcd.print("    UNARMED!          "); 
+      setColor(0,0,255); 
+    } 
+    delay(2000); 
+    setColor(0,0,0); 
+  }
+  
+
+
+  if(digitalRead(RELAYbutton)){                                                                // event if light bulb button(1) is pushed 
+    lightBulb++; lightBulb=lightBulb%2; 
+    if(DEBUG) Serial.print("The light bulb is "); if(DEBUG) Serial.println(lightBulb); 
+    if(lightBulb){
+      lcd.setCursor(0,0); 
+      lcd.print("Light bulb                "); 
+      lcd.setCursor(0,1); 
+      lcd.print("         ON!          "); 
+      setColor(255,255,255); 
+    }
+    else{
+      lcd.setCursor(0,0); 
+      lcd.print("Light bulb          "); 
+      lcd.setCursor(0,1); 
+      lcd.print("         OFF!     "); 
+      setColor(0,0,0); 
+    }
+    delay(900); 
+  }  
+}
 
 
 void loop()                                                                // start a new cycle
@@ -246,100 +334,9 @@ void loop()                                                                // st
     noTone(BUZZpin); 
 
 
+  ifPressButton();
 
 
-
-
-
-
- 
-  if(digitalRead(ALARMbutton)){                                                 // event if alarm button(2) is pushed 
-    alarm++; alarm=alarm%2; 
-    if(DEBUG) Serial.print("Alarm is "); if(DEBUG) Serial.println(alarm);  
-    if(alarm){
-      
-      lcd.setCursor(0,0); lcd.print("House will be         "); 
-      lcd.setCursor(0,1); lcd.print(" armed in         "); 
-      delay(1000); 
-      
-      for( int i = 19 ; i>=0 ; --i ){
-        lcd.setCursor(12,1);
-        if(i<10) lcd.setCursor(11,1);
-        lcd.print(i); lcd.print("         "); 
-
-        setColor(40,0,0);
-        delay(100); 
-        setColor(0,0,0); 
-        delay(900);
-
-        if(digitalRead(ALARMbutton)){
-          alarm++; alarm=alarm%2; 
-          if(DEBUG) Serial.print("Alarm is "); if(DEBUG) Serial.println(alarm);  
-          break; 
-        }
-      }
-      if(alarm){
-        lcd.setCursor(0,0); 
-        lcd.print("House is now       "); 
-        lcd.setCursor(0,1); 
-        lcd.print("      ARMED!          "); 
-        setColor(255,0,0); 
-        }
-      else{
-        lcd.setCursor(0,0); 
-        lcd.print("House is now       "); 
-        lcd.setCursor(0,1); 
-        lcd.print("    UNARMED!           "); 
-        setColor(0,0,255); 
-      }
-    }
-    else{
-      lcd.setCursor(0,0); 
-      lcd.print("House is now       "); 
-      lcd.setCursor(0,1); 
-      lcd.print("    UNARMED!          "); 
-      setColor(0,0,255); 
-    } 
-    delay(2000); 
-    setColor(0,0,0); 
-  }
-  
-
-
-
-
-
-
-
-
-
-  if(digitalRead(RELAYbutton)){                                                                // event if light bulb button(1) is pushed 
-    lightBulb++; lightBulb=lightBulb%2; 
-    if(DEBUG) Serial.print("The light bulb is "); if(DEBUG) Serial.println(lightBulb); 
-    if(lightBulb){
-      lcd.setCursor(0,0); 
-      lcd.print("Light bulb                "); 
-      lcd.setCursor(0,1); 
-      lcd.print("         ON!          "); 
-      setColor(255,255,255); 
-    }
-    else{
-      lcd.setCursor(0,0); 
-      lcd.print("Light bulb          "); 
-      lcd.setCursor(0,1); 
-      lcd.print("         OFF!     "); 
-      setColor(0,0,0); 
-    }
-    delay(900); 
-  }
-  
-
-
-
-
-
-
-  
   if(digitalRead(PIRsensorPin)){                                                                 // event motion sense 
     if(DEBUG) Serial.println("Somebody is in this area!"); 
     LASTmotion=millis()/1000; 
@@ -416,7 +413,7 @@ void loop()                                                                // st
     lcd.setCursor(0,0); 
     lcd.print("  Humid="); lcd.print((int)dht.readHumidity()); lcd.print("%            ");  
     lcd.setCursor(0,1); 
-    lcd.print(" Warmth="); lcd.print((int)dht.readTemperature()); lcd.println("'C            ");
+    lcd.print(" Warmth="); lcd.print((int)dht.readTemperature()); lcd.write(byte(8)); lcd.println("C            ");
   }
   else{
     lcd.setCursor(0,0); 
@@ -501,8 +498,10 @@ void loop()                                                                // st
     for(int i=0;i<30;i++) Serial.println();                   // clean screen of Serial 
 
 
-
-  delay(2000);                                                // 2 second pause after cycle is over for avoiding overheating and over-use of electricity 
+  for(int i=0;i<10;i++){                                      // 2 second pause after cycle is over for avoiding overheating and over-use of electricity
+    ifPressButton();
+    delay(200);
+  }                                                            
 }                                                             // end of cycle 
 
 
