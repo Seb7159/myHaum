@@ -4,7 +4,7 @@
 #include <LiquidCrystal.h> 
 #include <DHT.h> 
 
-#define DEBUG 0                         // if DEBUG is 1, the arduino will print data on Serial 
+#define DEBUG 1                         // if DEBUG is 1, the arduino will print data on Serial 
 
 #define PHOTOpin A0                     // analog photoresistor 
 #define GASpin A7                       // analog gas 
@@ -158,7 +158,7 @@ void setup(){
   for( loadTime = 7 ; loadTime < 10; ++loadTime)
     loadScreen(loadTime); 
 
-  if(!(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2])){          // test if the ESP is already connected to previous WiFi 
+  if(bufferr[0]!=ESP8266_SSID[0] || bufferr[1]!=ESP8266_SSID[1] || bufferr[2]!=ESP8266_SSID[2]){          // test if the ESP is already connected to previous WiFi 
   wifiSEND.sendCommand(F("AT+RST"), bufferr, sizeof(bufferr));                 // reset WiFi module 
   delay(2000); 
   wifiSEND.setupAsWifiStation(ESP8266_SSID, ESP8266_PASS, &Serial);            // connect to the WiFi with the set ssid and password 
